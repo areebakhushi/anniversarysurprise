@@ -301,7 +301,7 @@ function HeartFrame({ src, alt }: { src: string; alt: string }) {
             <path d="M50 88 C 15 65, 5 40, 20 22 C 32 8, 45 15, 50 28 C 55 15, 68 8, 80 22 C 95 40, 85 65, 50 88 Z" />
           </clipPath>
         </defs>
-        <image href={src} width="100" height="100" preserveAspectRatio="xMidYMid slice" clipPath="url(#heart-clip)" />
+        <image href={src} width="100" height="100" preserveAspectRatio="xMidYMid meet" clipPath="url(#heart-clip)" />
         <path
           d="M50 88 C 15 65, 5 40, 20 22 C 32 8, 45 15, 50 28 C 55 15, 68 8, 80 22 C 95 40, 85 65, 50 88 Z"
           fill="none"
