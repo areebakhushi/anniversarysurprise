@@ -17,6 +17,10 @@ import photo9 from "@/assets/photos/A1BEC170-1B6C-4E09-BD4C-863CEBAF803B.asset.j
 import photo10 from "@/assets/photos/9482DF21-E87A-44E3-80F8-874C2B7CEE8C.asset.json";
 import photo11 from "@/assets/photos/E6B920D4-0050-47E4-AE17-964ECCA44D75.asset.json";
 import photo12 from "@/assets/photos/CEBBBF31-EDBC-4BA3-BF6A-1EC3BEEC667A.asset.json";
+// New timeline images (viaje, abrazo, cita)
+import newViaje from "@/assets/photos/new-viaje.asset.json";
+import newAbrazo from "@/assets/photos/new-abrazo.asset.json";
+import newCita from "@/assets/photos/new-cita.asset.json";
 
 export const Route = createFileRoute("/")({
   component: AnniversaryPage,
@@ -264,7 +268,9 @@ function Polaroid({ src, alt, tilt, tape = "left" }: { src: string; alt: string;
         style={{ boxShadow: "0 2px 6px rgba(0,0,0,0.25)" }}
         aria-hidden
       />
-      <img src={src} alt={alt} className="block aspect-square w-full object-cover" loading="lazy" />
+      <div className="flex aspect-square w-full items-center justify-center bg-black/10">
+        <img src={src} alt={alt} className="block max-h-full max-w-full object-contain" loading="lazy" />
+      </div>
     </div>
   );
 }
@@ -277,7 +283,9 @@ function CircleFrame({ src, alt }: { src: string; alt: string }) {
         boxShadow: "0 0 25px rgba(255,120,200,0.55), 0 0 60px rgba(140,60,220,0.45)",
       }}
     >
-      <img src={src} alt={alt} className="h-full w-full rounded-full object-cover" loading="lazy" />
+      <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-[#1a0d38]">
+        <img src={src} alt={alt} className="max-h-full max-w-full object-contain" loading="lazy" />
+      </div>
     </div>
   );
 }
@@ -293,7 +301,7 @@ function HeartFrame({ src, alt }: { src: string; alt: string }) {
             <path d="M50 88 C 15 65, 5 40, 20 22 C 32 8, 45 15, 50 28 C 55 15, 68 8, 80 22 C 95 40, 85 65, 50 88 Z" />
           </clipPath>
         </defs>
-        <image href={src} width="100" height="100" preserveAspectRatio="xMidYMid slice" clipPath="url(#heart-clip)" />
+        <image href={src} width="100" height="100" preserveAspectRatio="xMidYMid meet" clipPath="url(#heart-clip)" />
         <path
           d="M50 88 C 15 65, 5 40, 20 22 C 32 8, 45 15, 50 28 C 55 15, 68 8, 80 22 C 95 40, 85 65, 50 88 Z"
           fill="none"
@@ -314,10 +322,10 @@ function Historia() {
           {/* Left column: polaroid + circle */}
           <div className="hidden flex-col justify-around gap-6 md:flex">
             <Reveal delay={100}>
-              <Polaroid src={photo1.url} alt="Recuerdo" tilt={-6} tape="right" />
+              <Polaroid src={photo5.url} alt="Recuerdo" tilt={-6} tape="right" />
             </Reveal>
             <Reveal delay={400}>
-              <CircleFrame src={photo2.url} alt="Recuerdo" />
+              <CircleFrame src={photo6.url} alt="Recuerdo" />
             </Reveal>
           </div>
 
@@ -344,19 +352,19 @@ function Historia() {
           {/* Right column: polaroid + heart */}
           <div className="hidden flex-col justify-around gap-6 md:flex">
             <Reveal delay={200}>
-              <Polaroid src={photo3.url} alt="Recuerdo" tilt={5} tape="left" />
+              <Polaroid src={photo7.url} alt="Recuerdo" tilt={5} tape="left" />
             </Reveal>
             <Reveal delay={500}>
-              <HeartFrame src={photo4.url} alt="Recuerdo" />
+              <HeartFrame src={photo8.url} alt="Recuerdo" />
             </Reveal>
           </div>
 
           {/* Mobile: below card, scrapbook row */}
           <div className="grid grid-cols-2 gap-4 md:hidden">
-            <Reveal><Polaroid src={photo1.url} alt="Recuerdo" tilt={-5} tape="right" /></Reveal>
-            <Reveal delay={150}><Polaroid src={photo3.url} alt="Recuerdo" tilt={4} tape="left" /></Reveal>
-            <Reveal delay={300}><CircleFrame src={photo2.url} alt="Recuerdo" /></Reveal>
-            <Reveal delay={450}><HeartFrame src={photo4.url} alt="Recuerdo" /></Reveal>
+            <Reveal><Polaroid src={photo5.url} alt="Recuerdo" tilt={-5} tape="right" /></Reveal>
+            <Reveal delay={150}><Polaroid src={photo7.url} alt="Recuerdo" tilt={4} tape="left" /></Reveal>
+            <Reveal delay={300}><CircleFrame src={photo6.url} alt="Recuerdo" /></Reveal>
+            <Reveal delay={450}><HeartFrame src={photo8.url} alt="Recuerdo" /></Reveal>
           </div>
         </div>
       </div>
@@ -371,25 +379,25 @@ const items: Item[] = [
     icon: "✈️",
     title: "Nuestro primer viaje",
     text: "Explorar nuevos lugares, crear recuerdos inolvidables y vivir mil aventuras tomados de la mano.",
-    img: photo5.url,
+    img: newViaje.url,
   },
   {
     icon: "🤗",
     title: "Nuestro primer abrazo",
     text: "Ese abrazo que lo cambia todo, que te hace sentir en casa… en sus brazos.",
-    img: photo6.url,
+    img: newAbrazo.url,
   },
   {
     icon: "💕",
     title: "Nuestra primera cita",
     text: "Esa cita llena de risas, nervios y miradas que dicen más de mil palabras.",
-    img: photo7.url,
+    img: newCita.url,
   },
   {
     icon: "✨",
     title: "Y todos los sueños que aún nos faltan por cumplir juntos",
     text: "Planes, metas, sueños… todo es mejor si es contigo. Nuestro mejor capítulo aún está por escribirse.",
-    img: photo8.url,
+    img: photo4.url,
   },
 ];
 
@@ -409,16 +417,20 @@ function TimelineCard({ item, i }: { item: Item; i: number }) {
       </div>
 
       <article className="glass-card overflow-hidden rounded-2xl">
-        <div className="grid grid-cols-1 gap-0 sm:grid-cols-[1.4fr_1fr]">
+        <div className="flex flex-col gap-0">
           <div className="p-4 sm:p-6">
             <h3 className="font-script text-2xl text-pink-100 text-glow-pink sm:text-3xl">
               <span className="mr-2">{item.icon}</span>{item.title}
             </h3>
             <p className="mt-3 font-serif-r text-[14px] leading-relaxed text-pink-50/90 sm:text-[16px]">{item.text}</p>
           </div>
-          <div className="relative h-40 sm:h-full sm:min-h-[180px]">
-            <img src={item.img} alt="" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#1a0d38]/60" />
+          <div className="flex w-full items-center justify-center bg-black/40 p-3 sm:p-4">
+            <img
+              src={item.img}
+              alt=""
+              className="max-h-[70vh] w-auto max-w-full rounded-lg object-contain"
+              loading="lazy"
+            />
           </div>
         </div>
       </article>
@@ -466,12 +478,12 @@ function Closing() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#1e0f42]/70 via-[#4a1273]/50 to-[#7a1e5f]/60" />
       <div className="relative z-10 flex min-h-[80vh] flex-col items-center justify-center px-4 py-24 text-center">
         {/* Little photo strip */}
-        <div className="mb-10 flex justify-center gap-3 sm:gap-5">
+        <div className="mb-10 flex flex-wrap justify-center gap-3 sm:gap-5">
           {[photo9, photo10, photo11, photo12].map((p, i) => (
             <Reveal key={i} delay={i * 120}>
               <div className="animate-idle-float" style={{ ["--tilt" as string]: `${(i - 1.5) * 4}deg`, transform: `rotate(${(i - 1.5) * 4}deg)` }}>
-                <div className="w-16 bg-[#f6f2e8] p-1 pb-3 sm:w-24 sm:p-2 sm:pb-5" style={{ boxShadow: "var(--shadow-photo)" }}>
-                  <img src={p.url} alt="" className="aspect-square w-full object-cover" loading="lazy" />
+                <div className="flex h-28 w-24 items-center justify-center bg-[#f6f2e8] p-1 pb-3 sm:h-40 sm:w-32 sm:p-2 sm:pb-5" style={{ boxShadow: "var(--shadow-photo)" }}>
+                  <img src={p.url} alt="" className="max-h-full max-w-full object-contain" loading="lazy" />
                 </div>
               </div>
             </Reveal>
@@ -504,7 +516,6 @@ function AnniversaryPage() {
   return (
     <main className="relative min-h-screen w-full">
       <StarsAndHearts />
-      <MusicToggle />
       <div className="relative z-10">
         <Hero />
         <Historia />
