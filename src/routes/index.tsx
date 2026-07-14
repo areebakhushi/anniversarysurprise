@@ -362,6 +362,7 @@ function Historia() {
             <Reveal delay={300}><CircleFrame src={photo6.url} alt="Recuerdo" /></Reveal>
             <Reveal delay={450}><HeartFrame src={photo8.url} alt="Recuerdo" /></Reveal>
           </div>
+        </div>
       </div>
     </section>
   );
