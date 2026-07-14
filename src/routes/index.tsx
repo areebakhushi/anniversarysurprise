@@ -318,10 +318,10 @@ function Historia() {
           {/* Left column: polaroid + circle */}
           <div className="hidden flex-col justify-around gap-6 md:flex">
             <Reveal delay={100}>
-              <Polaroid src={photo1.url} alt="Recuerdo" tilt={-6} tape="right" />
+              <Polaroid src={photo5.url} alt="Recuerdo" tilt={-6} tape="right" />
             </Reveal>
             <Reveal delay={400}>
-              <CircleFrame src={photo2.url} alt="Recuerdo" />
+              <CircleFrame src={photo6.url} alt="Recuerdo" />
             </Reveal>
           </div>
 
@@ -348,21 +348,20 @@ function Historia() {
           {/* Right column: polaroid + heart */}
           <div className="hidden flex-col justify-around gap-6 md:flex">
             <Reveal delay={200}>
-              <Polaroid src={photo3.url} alt="Recuerdo" tilt={5} tape="left" />
+              <Polaroid src={photo7.url} alt="Recuerdo" tilt={5} tape="left" />
             </Reveal>
             <Reveal delay={500}>
-              <HeartFrame src={photo4.url} alt="Recuerdo" />
+              <HeartFrame src={photo8.url} alt="Recuerdo" />
             </Reveal>
           </div>
 
           {/* Mobile: below card, scrapbook row */}
           <div className="grid grid-cols-2 gap-4 md:hidden">
-            <Reveal><Polaroid src={photo1.url} alt="Recuerdo" tilt={-5} tape="right" /></Reveal>
-            <Reveal delay={150}><Polaroid src={photo3.url} alt="Recuerdo" tilt={4} tape="left" /></Reveal>
-            <Reveal delay={300}><CircleFrame src={photo2.url} alt="Recuerdo" /></Reveal>
-            <Reveal delay={450}><HeartFrame src={photo4.url} alt="Recuerdo" /></Reveal>
+            <Reveal><Polaroid src={photo5.url} alt="Recuerdo" tilt={-5} tape="right" /></Reveal>
+            <Reveal delay={150}><Polaroid src={photo7.url} alt="Recuerdo" tilt={4} tape="left" /></Reveal>
+            <Reveal delay={300}><CircleFrame src={photo6.url} alt="Recuerdo" /></Reveal>
+            <Reveal delay={450}><HeartFrame src={photo8.url} alt="Recuerdo" /></Reveal>
           </div>
-        </div>
       </div>
     </section>
   );
