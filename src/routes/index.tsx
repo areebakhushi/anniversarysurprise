@@ -29,6 +29,9 @@ export const Route = createFileRoute("/")({
 
 // ---------- Particle backdrop ----------
 function StarsAndHearts() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
   const stars = Array.from({ length: 90 });
   const hearts = Array.from({ length: 22 });
   return (
