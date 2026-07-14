@@ -17,6 +17,10 @@ import photo9 from "@/assets/photos/A1BEC170-1B6C-4E09-BD4C-863CEBAF803B.asset.j
 import photo10 from "@/assets/photos/9482DF21-E87A-44E3-80F8-874C2B7CEE8C.asset.json";
 import photo11 from "@/assets/photos/E6B920D4-0050-47E4-AE17-964ECCA44D75.asset.json";
 import photo12 from "@/assets/photos/CEBBBF31-EDBC-4BA3-BF6A-1EC3BEEC667A.asset.json";
+// New timeline images (viaje, abrazo, cita)
+import newViaje from "@/assets/photos/new-viaje.asset.json";
+import newAbrazo from "@/assets/photos/new-abrazo.asset.json";
+import newCita from "@/assets/photos/new-cita.asset.json";
 
 export const Route = createFileRoute("/")({
   component: AnniversaryPage,
