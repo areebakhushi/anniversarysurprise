@@ -413,16 +413,20 @@ function TimelineCard({ item, i }: { item: Item; i: number }) {
       </div>
 
       <article className="glass-card overflow-hidden rounded-2xl">
-        <div className="grid grid-cols-1 gap-0 sm:grid-cols-[1.4fr_1fr]">
+        <div className="flex flex-col gap-0">
           <div className="p-4 sm:p-6">
             <h3 className="font-script text-2xl text-pink-100 text-glow-pink sm:text-3xl">
               <span className="mr-2">{item.icon}</span>{item.title}
             </h3>
             <p className="mt-3 font-serif-r text-[14px] leading-relaxed text-pink-50/90 sm:text-[16px]">{item.text}</p>
           </div>
-          <div className="relative h-40 sm:h-full sm:min-h-[180px]">
-            <img src={item.img} alt="" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#1a0d38]/60" />
+          <div className="flex w-full items-center justify-center bg-black/40 p-3 sm:p-4">
+            <img
+              src={item.img}
+              alt=""
+              className="max-h-[70vh] w-auto max-w-full rounded-lg object-contain"
+              loading="lazy"
+            />
           </div>
         </div>
       </article>
