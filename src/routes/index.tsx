@@ -508,7 +508,6 @@ function AnniversaryPage() {
   return (
     <main className="relative min-h-screen w-full">
       <StarsAndHearts />
-      <MusicToggle />
       <div className="relative z-10">
         <Hero />
         <Historia />
