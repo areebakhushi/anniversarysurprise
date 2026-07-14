@@ -375,25 +375,25 @@ const items: Item[] = [
     icon: "✈️",
     title: "Nuestro primer viaje",
     text: "Explorar nuevos lugares, crear recuerdos inolvidables y vivir mil aventuras tomados de la mano.",
-    img: photo5.url,
+    img: newViaje.url,
   },
   {
     icon: "🤗",
     title: "Nuestro primer abrazo",
     text: "Ese abrazo que lo cambia todo, que te hace sentir en casa… en sus brazos.",
-    img: photo6.url,
+    img: newAbrazo.url,
   },
   {
     icon: "💕",
     title: "Nuestra primera cita",
     text: "Esa cita llena de risas, nervios y miradas que dicen más de mil palabras.",
-    img: photo7.url,
+    img: newCita.url,
   },
   {
     icon: "✨",
     title: "Y todos los sueños que aún nos faltan por cumplir juntos",
     text: "Planes, metas, sueños… todo es mejor si es contigo. Nuestro mejor capítulo aún está por escribirse.",
-    img: photo8.url,
+    img: photo4.url,
   },
 ];
 
