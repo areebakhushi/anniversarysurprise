@@ -283,7 +283,9 @@ function CircleFrame({ src, alt }: { src: string; alt: string }) {
         boxShadow: "0 0 25px rgba(255,120,200,0.55), 0 0 60px rgba(140,60,220,0.45)",
       }}
     >
-      <img src={src} alt={alt} className="h-full w-full rounded-full object-cover" loading="lazy" />
+      <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-[#1a0d38]">
+        <img src={src} alt={alt} className="max-h-full max-w-full object-contain" loading="lazy" />
+      </div>
     </div>
   );
 }
