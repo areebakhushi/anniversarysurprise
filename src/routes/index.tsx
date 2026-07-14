@@ -268,7 +268,9 @@ function Polaroid({ src, alt, tilt, tape = "left" }: { src: string; alt: string;
         style={{ boxShadow: "0 2px 6px rgba(0,0,0,0.25)" }}
         aria-hidden
       />
-      <img src={src} alt={alt} className="block aspect-square w-full object-cover" loading="lazy" />
+      <div className="flex aspect-square w-full items-center justify-center bg-black/10">
+        <img src={src} alt={alt} className="block max-h-full max-w-full object-contain" loading="lazy" />
+      </div>
     </div>
   );
 }
