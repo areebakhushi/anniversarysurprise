@@ -474,12 +474,12 @@ function Closing() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#1e0f42]/70 via-[#4a1273]/50 to-[#7a1e5f]/60" />
       <div className="relative z-10 flex min-h-[80vh] flex-col items-center justify-center px-4 py-24 text-center">
         {/* Little photo strip */}
-        <div className="mb-10 flex justify-center gap-3 sm:gap-5">
+        <div className="mb-10 flex flex-wrap justify-center gap-3 sm:gap-5">
           {[photo9, photo10, photo11, photo12].map((p, i) => (
             <Reveal key={i} delay={i * 120}>
               <div className="animate-idle-float" style={{ ["--tilt" as string]: `${(i - 1.5) * 4}deg`, transform: `rotate(${(i - 1.5) * 4}deg)` }}>
-                <div className="w-16 bg-[#f6f2e8] p-1 pb-3 sm:w-24 sm:p-2 sm:pb-5" style={{ boxShadow: "var(--shadow-photo)" }}>
-                  <img src={p.url} alt="" className="aspect-square w-full object-cover" loading="lazy" />
+                <div className="flex h-28 w-24 items-center justify-center bg-[#f6f2e8] p-1 pb-3 sm:h-40 sm:w-32 sm:p-2 sm:pb-5" style={{ boxShadow: "var(--shadow-photo)" }}>
+                  <img src={p.url} alt="" className="max-h-full max-w-full object-contain" loading="lazy" />
                 </div>
               </div>
             </Reveal>
